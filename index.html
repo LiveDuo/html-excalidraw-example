@@ -1,0 +1,14 @@
+<script src="https://unpkg.com/@excalidraw/utils@0.1.2/dist/excalidraw-utils.min.js"></script>
+<script>
+    const ellipse = {
+        type: "ellipse",
+        width: 200,
+        height: 200,
+        strokeColor: "black",
+        backgroundColor: "blue",
+    };
+    document.addEventListener("DOMContentLoaded", async (event) => {
+        const svg = await ExcalidrawUtils.exportToSvg({ elements: [ellipse] });
+        document.body.appendChild(svg);
+    });
+</script>
